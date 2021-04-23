@@ -1,0 +1,25 @@
+.Header {
+	span {
+		margin-right: 5px;
+	}
+
+	.title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.Link {
+	text-decoration: none;
+	list-style: none;
+	color: azure;
+	margin: 0 1rem;
+}
+
+.Link:hover {
+	text-decoration: none;
+	list-style: none;
+	opacity: 0.7;
+	color: azure;
+}

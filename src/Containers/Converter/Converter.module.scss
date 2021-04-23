@@ -1,0 +1,52 @@
+.form {
+	display: flex;
+
+	.formWrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 50px auto;
+
+		.arrow {
+			background-color: #343a40;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 50px;
+			height: 50px;
+			margin: 15px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		.formGroup {
+			width: 400px;
+			height: 120px;
+			padding: 20px;
+			background-color: #343a40;
+			color: white;
+			border-radius: 6px;
+
+			label {
+				display: flex;
+				cursor: pointer;
+			}
+
+			.inputs {
+				display: flex;
+				margin-top: 20px;
+
+				select {
+					margin-right: 10px;
+				}
+			}
+
+			.inputs:last-child {
+				input {
+					background-color: white;
+				}
+			}
+		}
+	}
+}

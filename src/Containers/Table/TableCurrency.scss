@@ -1,0 +1,41 @@
+@import '~bootstrap/scss/bootstrap';
+
+.wrapper {
+	margin: 50px 150px;
+
+	.baseWrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	td {
+		text-align: center;
+	}
+
+	td:first-child {
+		text-align: left;
+	}
+
+	.base {
+		cursor: pointer;
+		span {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.hight {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: greenyellow;
+	}
+
+	.low {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: red;
+	}
+}
