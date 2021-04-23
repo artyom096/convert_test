@@ -29,18 +29,16 @@
 	}
 
 	.hight {
-		display: flex;
+		display: table-cell;
 		justify-content: center;
 		align-items: center;
-		border: none;
 		color: green;
 	}
 
 	.low {
-		display: flex;
+		display: table-cell;
 		justify-content: center;
 		align-items: center;
-		border: none;
 		color: red;
 	}
 }

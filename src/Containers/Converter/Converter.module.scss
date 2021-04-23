@@ -2,9 +2,6 @@
 	display: flex;
 
 	.formWrapper {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		margin: 50px auto;
 
 		.arrow {
@@ -15,14 +12,11 @@
 			align-items: center;
 			width: 50px;
 			height: 50px;
-			margin: 15px;
 			border-radius: 50%;
 			cursor: pointer;
 		}
 
 		.formGroup {
-			width: 400px;
-			height: 120px;
 			padding: 20px;
 			background-color: #343a40;
 			color: white;
@@ -47,6 +41,73 @@
 					background-color: white;
 				}
 			}
+		}
+	}
+}
+
+@media (min-width: 890px) and (max-width: 1200px) {
+	.formWrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.formGroup {
+			height: 120px;
+			width: 400px;
+		}
+		.arrow {
+			margin: 15px;
+		}
+	}
+}
+
+@media (min-width: 400px) and (max-width: 890px) {
+	.formWrapper {
+		display: block;
+
+		.formGroup {
+			height: 120px;
+			width: 400px;
+		}
+
+		.arrow {
+			display: flex;
+			margin: 0 auto;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.formWrapper {
+		display: block;
+
+		.formGroup {
+			height: 150px;
+			width: 350px;
+		}
+
+		.arrow {
+			display: flex;
+			margin: 0 auto;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media (max-width: 355px) {
+	.formWrapper {
+		display: block;
+
+		.formGroup {
+			height: 150px;
+			width: 300px;
+		}
+
+		.arrow {
+			display: flex;
+			margin: 0 auto;
+			margin-bottom: 15px;
 		}
 	}
 }
