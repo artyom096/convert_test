@@ -39,7 +39,7 @@ export const TableCurrency = () => {
 
     return (
         <div className='wrapper'>
-            <InputGroup size="sm" className="mb-3">
+            <InputGroup size="sm" className="mb-3 input">
                 <FormControl
                     aria-label="Small"
                     aria-describedby="inputGroup-sizing-sm"
@@ -111,7 +111,7 @@ export const TableCurrency = () => {
                                     {
                                         base === 'Курс к рублю' ?
                                             (coin.Value - coin.Previous).toFixed(3)
-                                            : (((coin.Value - coin.Previous) / coin.Value) * 1 / coin.Value).toFixed(5)
+                                            : (((coin.Value - coin.Previous) / coin.Value) * 1 / coin.Value).toFixed(5) * (-1)
                                     }
 
                                 </td>

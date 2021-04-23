@@ -1,7 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 
 .wrapper {
-	margin: 50px 150px;
+	.input {
+		width: 100%;
+		margin-top: 10px;
+	}
 
 	.baseWrapper {
 		display: flex;
@@ -29,13 +32,53 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: greenyellow;
+		border: none;
+		color: green;
 	}
 
 	.low {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		border: none;
 		color: red;
+	}
+}
+
+@media (min-width: 1200px) {
+	.wrapper {
+		margin: 50px 150px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.wrapper {
+		margin: 30px 120px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+	.wrapper {
+		margin: 20px 60px;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
+	.wrapper {
+		font-size: 10px;
+		margin: 0;
+	}
+}
+
+@media (min-width: 350px) and (max-width: 480px) {
+	.wrapper {
+		font-size: 8px;
+		margin: 0;
+	}
+}
+
+@media (max-width: 350px) {
+	.wrapper {
+		font-size: 6px;
 	}
 }
