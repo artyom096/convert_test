@@ -65,6 +65,10 @@
 	.wrapper {
 		font-size: 10px;
 		margin: 0;
+
+		span {
+			font-size: 10px;
+		}
 	}
 }
 
@@ -72,11 +76,19 @@
 	.wrapper {
 		font-size: 8px;
 		margin: 0;
+
+		span {
+			font-size: 8px;
+		}
 	}
 }
 
 @media (max-width: 350px) {
 	.wrapper {
 		font-size: 6px;
+
+		span {
+			font-size: 6px;
+		}
 	}
 }
