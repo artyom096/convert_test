@@ -1,4 +1,3 @@
-
 import { Route, Switch } from 'react-router';
 import { Converter } from './Containers/Converter/Converter';
 import { Header } from './Containers/Header/Header';
@@ -6,7 +5,7 @@ import { TableCurrency } from './Containers/Table/TableCurrency';
 
 const App = () => {
   return (
-    <div >
+    <div>
       <Header />
       <Switch>
         <Route exact path='/'>

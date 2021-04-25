@@ -20,6 +20,14 @@
 		text-align: left;
 	}
 
+	th {
+		text-align: center;
+	}
+
+	th:first-child {
+		text-align: left;
+	}
+
 	.base {
 		cursor: pointer;
 		span {

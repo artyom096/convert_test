@@ -34,6 +34,24 @@
 				select {
 					margin-right: 10px;
 				}
+
+				input[type='number']::-webkit-outer-spin-button,
+				input[type='number']::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+				input[type='number'] {
+					-moz-appearance: textfield;
+				}
+				input[type='number']:hover,
+				input[type='number']:focus {
+					-moz-appearance: number-input;
+				}
+				input[type='number']::-webkit-inner-spin-button,
+				input[type='number']::-webkit-outer-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
 			}
 
 			.inputs:last-child {
@@ -45,18 +63,30 @@
 	}
 }
 
-@media (min-width: 890px) and (max-width: 1200px) {
+@media (min-width: 1200px) {
 	.formWrapper {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-
 		.formGroup {
 			height: 120px;
 			width: 400px;
 		}
 		.arrow {
 			margin: 15px;
+			margin-top: 35px;
+		}
+	}
+}
+
+@media (min-width: 890px) and (max-width: 1200px) {
+	.formWrapper {
+		display: flex;
+		.formGroup {
+			height: 120px;
+			width: 400px;
+		}
+		.arrow {
+			margin: 15px;
+			margin-top: 35px;
 		}
 	}
 }
@@ -78,7 +108,7 @@
 	}
 }
 
-@media (max-width: 400px) {
+@media (min-width: 355px) and (max-width: 400px) {
 	.formWrapper {
 		display: block;
 
@@ -95,13 +125,30 @@
 	}
 }
 
-@media (max-width: 355px) {
+@media (min-width: 300px) and (max-width: 355px) {
 	.formWrapper {
 		display: block;
 
 		.formGroup {
 			height: 150px;
 			width: 300px;
+		}
+
+		.arrow {
+			display: flex;
+			margin: 0 auto;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media (max-width: 300px) {
+	.formWrapper {
+		display: block;
+
+		.formGroup {
+			height: 150px;
+			width: 250px;
 		}
 
 		.arrow {

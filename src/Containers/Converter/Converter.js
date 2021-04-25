@@ -8,8 +8,6 @@ import classes from './Converter.module.scss'
 
 export const Converter = () => {
 
-    //ticker and input1
-
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getCurrencyAction())
@@ -50,7 +48,13 @@ export const Converter = () => {
 
     }
 
-    console.log(priceToCoin);
+    const removeZero = (value) => {
+        if (value === '0') {
+            dispatch(quantityExchange(''))
+        } else {
+            return
+        }
+    }
 
     return (
         <div>
@@ -58,9 +62,7 @@ export const Converter = () => {
                 <div className={classes.formWrapper}>
                     <Form.Group className={classes.formGroup}>
                         <Form.Label htmlFor='area1' >
-                            {
-                                Object.values(area1)[4]
-                            }
+                            {Object.values(area1)[4]}
                         </Form.Label>
                         <div className={classes.inputs}>
                             <Form.Control
@@ -77,6 +79,8 @@ export const Converter = () => {
                             </Form.Control>
                             <InputGroup size="sm" className="mb-3">
                                 <FormControl
+                                    type='number'
+                                    onClick={event => removeZero(event.target.value)}
                                     value={quintity === 0 ? '' : quintity}
                                     id='area1'
                                     aria-label="Small"
@@ -93,9 +97,7 @@ export const Converter = () => {
                     </div>
                     <Form.Group className={classes.formGroup}>
                         <Form.Label>
-                            {
-                                Object.values(area2)[4]
-                            }
+                            {Object.values(area2)[4]}
                         </Form.Label>
                         <div className={classes.inputs}>
                             <Form.Control
@@ -112,6 +114,7 @@ export const Converter = () => {
                             </Form.Control>
                             <InputGroup size="sm" className="mb-3">
                                 <FormControl
+                                    type='number'
                                     value={quintity === 0 ? '' : priceToCoin}
                                     readOnly
                                     aria-label="Small"

@@ -6,14 +6,10 @@ import { filterCoinsAction, getCurrencyAction, setInput } from '../../Store/acti
 
 export const TableCurrency = () => {
 
-    //Проверить вычесления к валюте
-
     const dispatch = useDispatch()
 
     const [base, setBase] = useState('Курс к рублю')
     const [cls, setCls] = useState(['hight', 'low'])
-
-    console.log(cls);
 
     useEffect(() => {
         dispatch(getCurrencyAction())
@@ -41,6 +37,7 @@ export const TableCurrency = () => {
         <div className='wrapper'>
             <InputGroup size="sm" className="mb-3 input">
                 <FormControl
+                    placeholder='Поиск'
                     aria-label="Small"
                     aria-describedby="inputGroup-sizing-sm"
                     onChange={event => changeInput(event)}
@@ -60,10 +57,10 @@ export const TableCurrency = () => {
                                 {base === 'Курс к рублю'
                                     ? <span className="material-icons">
                                         expand_more
-                            </span>
+                                    </span>
                                     : <span className="material-icons">
                                         expand_less
-                            </span>
+                                    </span>
                                 }
                             </div>
                         </th>
@@ -81,7 +78,6 @@ export const TableCurrency = () => {
                                         coin.Value
                                         : (1 / coin.Value).toFixed(3)
                                     }
-
                                 </td>
                                 <td
                                     className={`${coin.Value < coin.Previous ? cls[1] : cls[0]} `}
